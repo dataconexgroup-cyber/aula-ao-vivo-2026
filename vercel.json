@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist/client",
+  "functions": {
+    "api/handler.js": {
+      "includeFiles": "dist/server/**",
+      "memory": 512
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/handler"
+    }
+  ]
+}
